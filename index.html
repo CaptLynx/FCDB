@@ -23,10 +23,23 @@
 
 <body>
     <header>
-        <span class="h1">Fleet Carrier Database</span>
-        <span id="edtime"></span>
+      <a href="#" class="logo">Fleet Carrier Database</a> 
+        <ul>
+            <li><span id="edtime"></span></li>
+            <li><a href="#">Carriers</a></li>
+            <li><a href="#">Commodities</a></li>
+            <li><a href="#">Systems</a></li>
+            <li><a href="#">Your Carrier</a></li>
+
+        </ul>
     </header>
-        
+    <section class="banner"></section>    
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+          var header = document.querySelector("header");
+          header.classlist.toggle("sticky", window.scrollY > 0)
+          })
+      </script>
      <!-- External Scripts -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
