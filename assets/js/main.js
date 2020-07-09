@@ -1,4 +1,8 @@
-function startTime() {
+$(document).ready(function () {
+    startEDClock();
+});
+
+function startEDClock() {
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
@@ -7,7 +11,7 @@ function startTime() {
     s = checkTime(s);
     document.getElementById('edtime').innerHTML =
     h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
+    var t = setTimeout(startEDClock, 500);
   }
   function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
