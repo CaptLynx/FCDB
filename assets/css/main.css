@@ -1,94 +1,92 @@
-
-*
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body
-{
-    background: black;
-    min-height: 200vh;
-    overflow: hidden;
-}
-header
-{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    padding: 40px 100px;
-    z-index: 100000;
-}
-header.sticky
-{
-    padding: 5px 100px;
-    background: white;
-}
-header .logo
-{
-    position: relative;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: 0.6s;
-}
-header ul
-{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-header ul li
-{
-    position: relative;
-    list-style: none;
-}
-header ul li a
-{
-    position: relative;
-    margin: 0 15px;
-    text-decoration: none;
-    color: white;
-    letter-spacing: 2px;
-    font-weight: 500px;
-    transition: 0.6s;
-}
-header.sticky.logo,
-header.sticky ul li a 
-{
-    color:white;
-}
-.banner
-{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url(carriersc3.png);
-    background-size: cover;
-}
-
 :root {
-    --primary-color: #CD4E4E;
-    --secondary-color: #252525;
-    --tertiary-color: #1C1C1C;
-    --kinda-white: #f5f5f5;
+  --primary-color: #cd4e4e;
+  --secondary-color: #252525;
+  --tertiary-color: #1c1c1c;
+  --kinda-white: #f5f5f5;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 100000;
+}
+
+
+.logo {
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.6s;
+  white-space: normal;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 0;
+    }
+
+    .logo {
+        width: 75%;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, .4);
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, .4);
+        border-radius: 25px;
+    }
+    
+    #edtime {
+        width: 100%;
+    }
+}
+
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  transition: 0.6s;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/carriersc3-min.png);
+  background-size: cover;
 }
 
 footer {
-    background-color: var(--secondary-color);
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
 }

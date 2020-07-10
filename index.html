@@ -1,4 +1,4 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
 <head>
 
@@ -23,26 +23,32 @@
 
 <body>
     <header>
-        <a href="#" class="logo">Fleet Carrier Database</a>
-        <span id="edtime"></span> 
-        <ul>
-            <li><a href="#">Carriers</a></li>
-            <li><a href="#">Commodities</a></li>
-            <li><a href="#">Systems</a></li>
-            <li><a href="#">Your Carrier</a></li>
+        <nav class="navbar navbar-expand-md navbar-dark w-100">
+            <a href="/" class="logo navbar-brand display-1">Fleet Carrier Database</a>
 
-        </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" 
+             aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Carriers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Commodities</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Systems</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Your Carrier</a></li>
+                </ul>
+                <span id="edtime" class="navbar-text ml-lg-auto text-center text-muted display-4"></span> 
+            </div>
+        </nav>
     </header>
-    <section class="banner"></section>    
-    <script type="text/javascript">
-        window.addEventListener("scroll", function() {
-          var header = document.querySelector("header");
-          header.classlist.toggle("sticky", window.scrollY > 0)
-          })
-      </script>
+
+    <section class="banner"></section> 
+
      <!-- External Scripts -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
      <!-- Internal Scripts -->
      <script src="assets/js/main.js"></script>
