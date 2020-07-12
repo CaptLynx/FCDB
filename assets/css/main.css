@@ -6,8 +6,7 @@
 }
 
 body {
-  background: black;
-  overflow: hidden;
+  background:darkgrey;
 }
 
 header {
@@ -80,6 +79,7 @@ header ul li a {
   height: 100vh;
   background-image: url(../images/carriersc3-min.png);
   background-size: cover;
+  z-index: -1000;
 }
 
 footer {
