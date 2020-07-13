@@ -43,15 +43,19 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h2>Basic form</h2>
+            <div class="col-auto">
+                <h2>Carrier details</h2>
                 <form action="" method="">
                     <div class="form-group">
-                        <label for="name">Carrier Name and ID</label>
+                        <label for="id">Carrier ID *</label>
+                        <input type="id" class="form-control" id="id">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Carrier Name *</label>
                         <input type="name" class="form-control" id="name">
                     </div>
                     <div class="form-group">
-                        <label for="location">Carrier Location</label>
+                        <label for="location">Carrier Location *</label>
                         <input type="location" class="form-control" id="location">
                     </div>
                     <div class="form-group">
@@ -97,6 +101,22 @@
                       <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="hasrepair">
                         <label class="form-check-label" for="hasrepair">Repair service available?</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="hasrestock">
+                        <label class="form-check-label" for="hasrestock">Restock service available?</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="hascartographics">
+                        <label class="form-check-label" for="hascartographics">Cartographics service available?</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="hasremption">
+                        <label class="form-check-label" for="hasredemption">Redemption service available?</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="hassectrade">
+                        <label class="form-check-label" for="hassectrade">Secure trading available?</label>
                       </div>
                     <div class="form-group">
                         <input type="submit" class="btn btn-primary" id="submit" value="submit">

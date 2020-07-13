@@ -82,6 +82,14 @@ header ul li a {
   z-index: -1000;
 }
 
+.container {
+
+  justify-content: center;
+
+  margin-top: auto;
+
+}
+
 footer {
   background-color: var(--secondary-color);
   position: absolute;
