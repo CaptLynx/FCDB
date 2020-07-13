@@ -33,11 +33,15 @@ header {
   white-space: normal;
 }
 
+.logo-image {
+    width: 3em;
+}
+
 .content {
     background-color: var(--tertiary-color);
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
     header {
         padding: 0;
     }
