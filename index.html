@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
+<body onload="loadContent('home.html')">
 
     <header>
         <nav class="navbar navbar-expand-md navbar-dark w-100">
@@ -56,15 +56,16 @@
      <script src="assets/js/main.js"></script>
 </body>
 
-<section id="page-content"></section>
+<section class="container" id="page-content"></section>
 
 <footer>
-    <div class="container w-auto mx-auto">
-        <span class="copyright text-muted align-center">
+    <div class="container">
+        <div class="copyright text-muted  w-100">
             FCDB Copyright &copy; 
             <script>
                 document.write(new Date().getFullYear())
             </script>
-        </span>
+            <button type="button" class="btn btn-danger ml-3">Donate</button>
+        </div>
     </div>
 </footer>
