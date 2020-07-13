@@ -7,17 +7,20 @@
 
 body {
   background:darkgrey;
+  background-image: url(../images/carriersc.jpg);
+  background-size: cover;
+  min-height: 100%;
+  color: white;
 }
 
 header {
-  position: sticky;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   padding: 40px 100px;
   z-index: 100000;
 }
-
 
 .logo {
   font-weight: 700;
@@ -28,6 +31,10 @@ header {
   letter-spacing: 2px;
   transition: 0.6s;
   white-space: normal;
+}
+
+.content {
+    background-color: var(--tertiary-color);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -73,20 +80,12 @@ header ul li a {
   transition: 0.6s;
 }
 
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-image: url(../images/carriersc3-min.png);
-  background-size: cover;
-  z-index: -1000;
-}
-
 footer {
   background-color: var(--secondary-color);
-  position: relative;
-  bottom: 0;
+  position: sticky;
+  top: 100%;
   width: 100%;
   height: 50px;
   line-height: 50px;
+  z-index:1000;
 }
