@@ -6,8 +6,8 @@
 }
 
 body {
-  background:darkgrey;
-  background-image: url(../images/carriersc.jpg);
+  background:gray;
+  background-image: url(../images/bgtest.jpg);
   background-size: cover;
   min-height: 100%;
   color: white;
