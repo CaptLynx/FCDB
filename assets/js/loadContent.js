@@ -22,6 +22,7 @@ function loadContent(selection) {
             }
             xhttp.open('GET', 'pages/' + file, true);
             xhttp.send();
+            //window.history.pushState({}, '', "/" + file);
             return;
         }
     
