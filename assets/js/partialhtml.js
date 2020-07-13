@@ -1,5 +1,5 @@
 
-function htmlPartial(selection) {
+function partialhtml(selection) {
     var file, xhttp;
 
         file = selection;
