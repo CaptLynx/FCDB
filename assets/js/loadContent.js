@@ -1,5 +1,11 @@
 
-function partialhtml(selection) {
+/*
+    Loads page content from the /pages/ folder to enable single-page application functionality.
+    It will add the content inside an element with id="page-content"
+    Simply call the function at some point.. i.e. "loadContent('pageContent.html').
+*/
+
+function loadContent(selection) {
     var file, xhttp;
 
         file = selection;

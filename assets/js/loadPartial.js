@@ -1,7 +1,12 @@
+/*
+    Loads html partials from the /partials/ folder and replaces elements with the partial attribute. 
+    I.E. <div partial="navigation.html"></div>
+*/
+
 $(document).ready(function () {
-    htmlPartial();
+    loadPartial();
 });
-function htmlPartial() {
+function loadPartial() {
     var z, i, elmnt, file, xhttp;
 
     z = document.getElementsByTagName('*');
@@ -19,7 +24,6 @@ function htmlPartial() {
                     if (this.status == 404) { elmnt.innerHTML = `Error loading partial ${ file }`; }
 
                     $(elmnt).contents().unwrap();
-                    htmlPartial();
                 }
             }
             xhttp.open('GET', 'partials/' + file, true);
