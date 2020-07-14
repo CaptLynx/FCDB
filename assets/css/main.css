@@ -92,7 +92,7 @@ header ul li a {
 
 footer {
   background-color: var(--secondary-color);
-  position: absolute;
+  position: sticky;
   top: 100%;
   bottom: 0;
   width: 100%;
