@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
         <div class="col-auto">
-            <h2>Carrier details</h2>
-            <form action="" method="">
+            <form action="carriers.html" method="GET" class="form-group">
                     <!-- Carrier Identification -->
+                    <h2>Carrier details</h2>
                 <div class="form-group">
                     <label for="id">Carrier ID *</label>
                     <input type="id" class="form-control" id="id" required>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label for="tariff">Tariff Amount</label>
-                    <input type="tariff" class="form-control" id="tariff">
+                    <input type="number" class="form-control" id="tariff" min="0" max="1000" step="10">
                 </div>
                     <!-- Checkmarks -->
                 <div class="form-group form-check">
