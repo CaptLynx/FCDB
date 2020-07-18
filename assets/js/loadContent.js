@@ -20,7 +20,7 @@ function loadContent(selection) {
 
                 }
             }
-            window.history.pushState({}, '', "/" + file);
+            window.history.pushState({}, '', "/" + file.split('.html#')[0]);
             xhttp.open('GET', 'pages/' + file, true);
             xhttp.send();
             return;
