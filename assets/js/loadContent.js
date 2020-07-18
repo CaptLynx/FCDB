@@ -20,7 +20,11 @@ function loadContent(selection) {
 
                 }
             }
-            window.history.pushState({}, '', "/" + file.split('.html')[0]);
+            if(file !== 'home.html') {
+                window.history.pushState({}, '', '/' + file.split('.html')[0]);
+            } else {
+                window.history.pushState({}, '', '/');
+            }
             xhttp.open('GET', 'pages/' + file, true);
             xhttp.send();
             return;
