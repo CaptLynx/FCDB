@@ -20,9 +20,9 @@ function loadContent(selection) {
 
                 }
             }
+            window.history.pushState({}, '', "/" + file);
             xhttp.open('GET', 'pages/' + file, true);
             xhttp.send();
-            //window.history.pushState({}, '', "/" + file);
             return;
         }
     
