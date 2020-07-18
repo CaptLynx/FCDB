@@ -6,10 +6,9 @@
 */
 
 function loadContent(selection) {
-    var file, xhttp;
+    var xhttp;
 
-        file = selection;
-        if (file) {
+        if (selection) {
             xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4) {
@@ -20,12 +19,12 @@ function loadContent(selection) {
 
                 }
             }
-            if(file !== 'home.html') {
-                window.history.pushState({}, '', '/' + file.split('.html')[0]);
+            if(selection !== 'home.html') {
+                window.history.pushState({}, '', '/' + selection.split('.html')[0]);
             } else {
                 window.history.pushState({}, '', '/');
             }
-            xhttp.open('GET', 'pages/' + file, true);
+            xhttp.open('GET', 'pages/' + selection, true);
             xhttp.send();
             return;
         }
