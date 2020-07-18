@@ -21,7 +21,6 @@ function loadContent(selection) {
                 }
             }
             window.history.pushState({}, '', "/" + file.split('.html')[0]);
-            document.location.href = String( document.location.href ).replace( /#/, "" );
             xhttp.open('GET', 'pages/' + file, true);
             xhttp.send();
             return;
