@@ -16,7 +16,7 @@ function loadContent(selection) {
                     if (this.status == 200) {
                         $('#page-content').html(this.responseText);
                     }
-                    if (this.status == 404) { $('#page-content').innerHTML = `Error loading partial ${ file }`; }
+                    if (this.status == 404) { loadContent('404.html'); }
 
                 }
             }
