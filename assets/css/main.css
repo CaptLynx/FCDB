@@ -11,17 +11,35 @@
 
 html {
   background: var(--tertiary-color);
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  padding-bottom: 60px;
+  position: relative;
+  overflow: scroll;
 }
 
 body {
+  color: white;
   background: url(../images/bgtest.jpg) no-repeat center center fixed;
   background-size: cover;
-  color: white;
 }
 
+/* Disabled because it causes graphical weirdness in iOS...
+#background {
+  background: url(../images/bgtest.jpg) top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+*/
+
 @supports (-moz-appearance: none) {
-  body {
-    height: 100%;
+  #wrapper {
+    min-height: 100vh;
   }
 }
 
@@ -98,10 +116,8 @@ header ul li a {
 
 footer {
   background-color: var(--secondary-color);
-  position: sticky;
-  flex-shrink: 0;
+  position: absolute;
   bottom: 0;
-  top: 100%;
   width: 100%;
   height: 60px;
   line-height: 60px;
