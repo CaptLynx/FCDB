@@ -1,0 +1,28 @@
+<h1>This is a carriers page!</h1>
+<h4>There's nothing here right now except testing!</h4>
+
+<div id="example"></div>
+
+
+<!-- 
+    Sam, all of this below is an example of how the addcarrier.html form data might be accessed on this page! 
+    It is NOT for production, so please, pleaassse don't just use this.
+-->
+<script>
+    console.log(window.history.state);
+    $(window.history.state).each(function(i, e) {
+        $('#example').append(
+            `<div class="row"><div class="column">Name: ${ window.history.state[i].name }</div><div class="column">Value: ${ window.history.state[i].value }</div></div>`
+        )
+    });
+</script>
+
+<style>
+    .row {
+        display: flex;
+    }
+
+    .column {
+        flex: 50%;
+    }
+</style>

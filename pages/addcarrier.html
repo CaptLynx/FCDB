@@ -1,97 +1,97 @@
 <div class="container">
     <div class="row">
         <div class="col-auto">
-            <form action="carriers.html" method="GET" class="form-group">
+            <form onsubmit="loadContent('carriers.html', $('form').serializeArray()); return false;" method="GET" class="form-group">
                     <!-- Carrier Identification -->
                     <h2>Carrier details</h2>
                 <div class="form-group">
                     <label for="id">Carrier ID *</label>
-                    <input type="id" class="form-control" id="id" placeholder="XXX-XXX" required>
+                    <input type="id" name="carrierID" class="form-control" id="id" placeholder="XXX-XXX" required>
                 </div>
                 <div class="form-group">
                     <label for="name">Carrier Name *</label>
-                    <input type="name" class="form-control" id="name" placeholder="Fleet Carrier" required>
+                    <input type="name" name="carrierName" class="form-control" id="name" placeholder="Fleet Carrier" required>
                 </div>
                 <div class="form-group">
                     <label for="name">Commander Name</label>
-                    <input type="name" class="form-control" id="name" placeholder="CMDR">
+                    <input type="name" name="cmdrName" class="form-control" id="name" placeholder="CMDR">
                 </div>
                 <div class="form-group">
                     <label for="tariff">Tariff Percentage</label>
-                    <input type="number" class="form-control" id="tariff" placeholder="0" min="0" max="1000" step="10">
+                    <input type="number" name="tarrif" class="form-control" id="tariff" placeholder="0" min="0" max="1000" step="10">
                 </div>
                     <!-- Checkmarks -->
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="hasrefuel">
+                    <input type="checkbox" name="hasRefuel" class="form-check-input" id="hasrefuel">
                     <label class="form-check-label" for="hasrefuel">Refueling service available?</label>
                   </div>
                   <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="hasrepair">
+                    <input type="checkbox" name="hasRepair" class="form-check-input" id="hasrepair">
                     <label class="form-check-label" for="hasrepair">Repair service available?</label>
                   </div>
                   <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="hasrestock">
+                    <input type="checkbox" name="hasRestock" class="form-check-input" id="hasrestock">
                     <label class="form-check-label" for="hasrestock">Restock service available?</label>
                   </div>
                   <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="hascartographics">
+                    <input type="checkbox" name="hasCartographics" class="form-check-input" id="hascartographics">
                     <label class="form-check-label" for="hascartographics">Cartographics service available?</label>
                   </div>
                   <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="hasremption">
+                    <input type="checkbox" name="hasRemption" class="form-check-input" id="hasremption">
                     <label class="form-check-label" for="hasredemption">Redemption service available?</label>
                   </div>
                   <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="hassectrade">
+                    <input type="checkbox" name="hasSecTrade" class="form-check-input" id="hassectrade">
                     <label class="form-check-label" for="hassectrade">Secure trading available?</label>
                   </div>
                     <!-- Carrier Location -->
                     <h2>Location</h2>
                 <div class="form-group">
                     <label for="syslocation">Carrier System Location *</label>
-                    <input type="syslocation" class="form-control" id="syslocation" placeholder="Achenar" required>
+                    <input type="syslocation" name="sysLoc" class="form-control" id="syslocation" placeholder="Achenar" required>
                 </div>
                 <div class="form-group">
                     <label for="bodylocation">Carrier Nearest Stellar Body *</label>
-                    <input type="bodylocation" class="form-control" id="bodylocation" placeholder="A1" required>
+                    <input type="bodylocation" name="bodyLoc" class="form-control" id="bodylocation" placeholder="A1" required>
                 </div>
                     <!-- Carrier Market -->
                     <h2>Market</h2>
                 <div class="form-group">
                     <label for="itemwanted">Desired Commodities</label>
-                    <input type="itemwanted" class="form-control" id="itemwanted" placeholder="Biowaste">
+                    <input type="itemwanted" name=" itemWanted" class="form-control" id="itemwanted" placeholder="Biowaste">
                 </div>
                 <div class="form-group">
                     <label for="buyprice">Buy Price</label>
-                    <input type="number" class="form-control" id="buyprice" placeholder="0" min="0" max="5000000000" step="5000">
+                    <input type="number" name="buyPrice" class="form-control" id="buyprice" placeholder="0" min="0" max="5000000000" step="5000">
                 </div>
                 <div class="form-group">
                     <label for="demand">Demand</label>
-                    <input type="number" class="form-control" id="demand" placeholder="0" min="0" max="25000" step="50">
+                    <input type="number" name="demand" class="form-control" id="demand" placeholder="0" min="0" max="25000" step="50">
                 </div>
                 <div class="form-group">
                     <label for="itemselling">Commodities for sale</label>
-                    <input type="itemselling" class="form-control" id="itemselling" placeholder="Magnetic boots">
+                    <input type="itemselling" name="itemSelling" class="form-control" id="itemselling" placeholder="Magnetic boots">
                 </div>
                 <div class="form-group">
                     <label for="sellprice">Sell Price</label>
-                    <input type="number" class="form-control" id="sellprice" placeholder="0" min="0" max="5000000000" step="5000">
+                    <input type="number" name="sellPrice" class="form-control" id="sellprice" placeholder="0" min="0" max="5000000000" step="5000">
                 </div>
                 <div class="form-group">
                     <label for="sellamount">Amount for sale</label>
-                    <input type="number" class="form-control" id="sellamount" placeholder="0" min="0" max="25000" step="50">
+                    <input type="number" name="sellAmount" class="form-control" id="sellamount" placeholder="0" min="0" max="25000" step="50">
                 </div>
                 <div class="form-group">
                     <label for="shipsale">Ships available for purchase</label>
-                    <input type="shipsale" class="form-control" id="shipsale" placeholder="Sidewinder, Hauler, Imperial Eagle, Type 6">
+                    <input type="shipsale" name="shipSale" class="form-control" id="shipsale" placeholder="Sidewinder, Hauler, Imperial Eagle, Type 6">
                 </div>
                 <div class="form-group">
                     <label for="outfiting">Outfitting modules available for purchase</label>
-                    <input type="outfitting" class="form-control" id="outfitting" placeholder="AFMU, Shock Cannon, Sensors">
+                    <input type="outfitting" name="outfitting" class="form-control" id="outfitting" placeholder="AFMU, Shock Cannon, Sensors">
                 </div>
                     <!-- User agreement and submit-->
                 <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" required id="agreement">
+                    <input type="checkbox" name="agreement" class="form-check-input" required id="agreement">
                     <label class="form-check-label" for="agreement">I agree to keep my carrier location and market information up to date.</label>
                   </div> 
                 <div class="form-group">
