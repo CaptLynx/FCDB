@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="row">
+        <div class="col-auto">
+            <form action="carriers.html" method="GET" class="form-group">
+                    <!-- Carrier Identification -->
+                    <h2>Carrier details</h2>
+                <div class="form-group">
+                    <label for="id">Carrier ID *</label>
+                    <input type="id" class="form-control" id="id" placeholder="XXX-XXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Carrier Name *</label>
+                    <input type="name" class="form-control" id="name" placeholder="Fleet Carrier" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Commander Name</label>
+                    <input type="name" class="form-control" id="name" placeholder="CMDR">
+                </div>
+                <div class="form-group">
+                    <label for="tariff">Tariff Percentage</label>
+                    <input type="number" class="form-control" id="tariff" placeholder="0" min="0" max="1000" step="10">
+                </div>
+                    <!-- Checkmarks -->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="hasrefuel">
+                    <label class="form-check-label" for="hasrefuel">Refueling service available?</label>
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="hasrepair">
+                    <label class="form-check-label" for="hasrepair">Repair service available?</label>
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="hasrestock">
+                    <label class="form-check-label" for="hasrestock">Restock service available?</label>
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="hascartographics">
+                    <label class="form-check-label" for="hascartographics">Cartographics service available?</label>
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="hasremption">
+                    <label class="form-check-label" for="hasredemption">Redemption service available?</label>
+                  </div>
+                  <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="hassectrade">
+                    <label class="form-check-label" for="hassectrade">Secure trading available?</label>
+                  </div>
+                    <!-- Carrier Location -->
+                    <h2>Location</h2>
+                <div class="form-group">
+                    <label for="syslocation">Carrier System Location *</label>
+                    <input type="syslocation" class="form-control" id="syslocation" placeholder="Achenar" required>
+                </div>
+                <div class="form-group">
+                    <label for="bodylocation">Carrier Nearest Stellar Body *</label>
+                    <input type="bodylocation" class="form-control" id="bodylocation" placeholder="A1" required>
+                </div>
+                    <!-- Carrier Market -->
+                    <h2>Market</h2>
+                <div class="form-group">
+                    <label for="itemwanted">Desired Commodities</label>
+                    <input type="itemwanted" class="form-control" id="itemwanted" placeholder="Biowaste">
+                </div>
+                <div class="form-group">
+                    <label for="buyprice">Buy Price</label>
+                    <input type="number" class="form-control" id="buyprice" placeholder="0" min="0" max="5000000000" step="5000">
+                </div>
+                <div class="form-group">
+                    <label for="demand">Demand</label>
+                    <input type="number" class="form-control" id="demand" placeholder="0" min="0" max="25000" step="50">
+                </div>
+                <div class="form-group">
+                    <label for="itemselling">Commodities for sale</label>
+                    <input type="itemselling" class="form-control" id="itemselling" placeholder="Magnetic boots">
+                </div>
+                <div class="form-group">
+                    <label for="sellprice">Sell Price</label>
+                    <input type="number" class="form-control" id="sellprice" placeholder="0" min="0" max="5000000000" step="5000">
+                </div>
+                <div class="form-group">
+                    <label for="sellamount">Amount for sale</label>
+                    <input type="number" class="form-control" id="sellamount" placeholder="0" min="0" max="25000" step="50">
+                </div>
+                <div class="form-group">
+                    <label for="shipsale">Ships available for purchase</label>
+                    <input type="shipsale" class="form-control" id="shipsale" placeholder="Sidewinder, Hauler, Imperial Eagle, Type 6">
+                </div>
+                <div class="form-group">
+                    <label for="outfiting">Outfitting modules available for purchase</label>
+                    <input type="outfitting" class="form-control" id="outfitting" placeholder="AFMU, Shock Cannon, Sensors">
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" id="submit" value="submit">
+                </div>
+            </form>     
+        </div>
+    </div>
+</div>
