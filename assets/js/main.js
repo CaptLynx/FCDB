@@ -23,7 +23,7 @@ window.addEventListener('popstate', function (e) {
 //When the page is loaded/refreshed, direct to correct page.
 function onFirstLoad() {
     if (sessionStorage.getItem('redirect404') !== null) {
-        loadContent(`${ sessionStorage.getItem('redirect404').substr(1) }`);
+        loadContent(sessionStorage.getItem('redirect404').substr(1));
         sessionStorage.removeItem('redirect404');
     } else {
         loadContent('home');
@@ -41,7 +41,9 @@ function loadContent(selection, state, changeState) {
     
     if (typeof changeState === 'undefined' && changeState !== false) {
         if (selection === 'home') { //Instead of home having a /home.html url, display as base domain.
-            window.history.pushState(state, '', '/');
+            if (window.location.pathname !== '/') {
+                window.history.pushState(state, '', '/');
+            }
         } else if (selection !== '404' && selection !== window.location.pathname.substr(1)) { //Maintain page url despite 404
             window.history.pushState(state, '', `/${selection}`);
         }
