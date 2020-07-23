@@ -13,9 +13,9 @@ $(document).ready(function () {
 
 window.addEventListener('popstate', function (e) {
     if (window.location.pathname === '/') {
-        loadContent(`home`, false);
+        loadContent(`home`, {}, false);
     } else {
-        loadContent(window.location.pathname.substr(1), false);
+        loadContent(window.location.pathname.substr(1), {}, false);
     }
 });
 
