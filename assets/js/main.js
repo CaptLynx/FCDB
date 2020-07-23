@@ -30,7 +30,8 @@ function onFirstLoad() {
     }
 }
 
-function loadContent(selection, state) {
+function loadContent(selection, state, changeState) {
+    changeState = changeState || true;
     $('#page-content').load(`pages/${ selection }`, function (response, status) {
         if (status === 'error') {
             loadContent('404'); //Possible infinite loop?
@@ -39,10 +40,12 @@ function loadContent(selection, state) {
     
     loadPartials(); //Check for partials every time the page is reloaded.
     
-    if (selection === 'home') { //Instead of home having a /home.html url, display as base domain.
-        window.history.pushState(state, '', '/');
-    } else if (selection !== '404') { //Maintain page url despite 404
-        window.history.pushState(state, '', `/${ selection }`);
+    if(changeState) {
+        if (selection === 'home') { //Instead of home having a /home.html url, display as base domain.
+            window.history.pushState(state, '', '/');
+        } else if (selection !== '404') { //Maintain page url despite 404
+            window.history.pushState(state, '', `/${ selection }`);
+        }
     }
 }
 
