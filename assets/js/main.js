@@ -38,9 +38,9 @@ function loadContent(selection, state) {
     });
 
     if (selection === 'home') { //Instead of home having a /home.html url, display as base domain.
-        window.history.pushState(state, '', '/');
+        window.history.replaceState(state, '', '/');
     } else if (selection !== '404') { //Maintain page url despite 404
-        window.history.pushState(state, '', `/${ selection }`);
+        window.history.replaceState(state, '', `/${ selection }`);
     }
 }
 
