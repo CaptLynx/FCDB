@@ -40,9 +40,9 @@ function loadContent(selection, state) {
     loadPartials(); //Check for partials every time the page is reloaded.
     
     if (selection === 'home') { //Instead of home having a /home.html url, display as base domain.
-        window.history.replaceState(state, '', '/');
+        window.history.pushState(state, '', '/');
     } else if (selection !== '404') { //Maintain page url despite 404
-        window.history.replaceState(state, '', `/${ selection }`);
+        window.history.pushState(state, '', `/${ selection }`);
     }
 }
 
