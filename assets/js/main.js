@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    loadPartials();
+    //Do nothing
 });
 
 
@@ -36,7 +36,9 @@ function loadContent(selection, state) {
             loadContent('404'); //Possible infinite loop?
         }
     });
-
+    
+    loadPartials(); //Check for partials every time the page is reloaded.
+    
     if (selection === 'home') { //Instead of home having a /home.html url, display as base domain.
         window.history.replaceState(state, '', '/');
     } else if (selection !== '404') { //Maintain page url despite 404
