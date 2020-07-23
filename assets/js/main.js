@@ -44,7 +44,6 @@ function loadContent(selection, state, changeState) {
             window.history.pushState(state, '', '/');
         } else if (selection !== '404' && selection !== window.location.pathname.substr(1)) { //Maintain page url despite 404
             window.history.pushState(state, '', `/${selection}`);
-            console.log('lol')
         }
     }
 }
