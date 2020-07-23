@@ -15,7 +15,7 @@ window.addEventListener('popstate', function (e) {
     if (window.location.pathname === '/') {
         loadContent(`home`);
     } else {
-        loadContent(`${ window.location.pathname.substr(1) }`);
+        loadContent(window.location.pathname.substr(1));
     }
 });
 
