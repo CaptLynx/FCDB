@@ -31,10 +31,11 @@ function onFirstLoad() {
 }
 
 function loadContent(selection, state, changeState) {
-    $('#page-content').load(`pages/${ selection }`, function (response, status) {
+    $('#page-content').hide().load(`pages/${ selection }`, function (response, status) {
         if (status === 'error') {
             loadContent('404'); //Possible infinite loop?
         }
+        $('#page-content').fadeIn('normal');
     });
     
     loadPartials(); //Check for partials every time the page is reloaded.
