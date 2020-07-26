@@ -87,7 +87,7 @@ function loadContent(selection, state) {
 
 function loadPartials() {
     $('[partial]').each(function (i) {
-        $(this).load(`partials/${$(this).attr('partial')}`, function (response, status) {
+        $(this).load(`${ window.location.origin }/partials/${$(this).attr('partial')}`, function (response, status) {
             $(this).contents().unwrap();
             if (status === 'error') {
                 $(this).html(`Error loading partial: ${$(this).attr('partial')}`);
