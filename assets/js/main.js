@@ -31,7 +31,7 @@ function onFirstLoad() {
 }
 
 function loadContent(selection, state, changeState) {
-    $('#page-content').hide().load(`pages/${ selection }`, function (response, status) {
+    $('#page-content').hide().load(`${ window.location.origin }/pages/${ selection }`, function (response, status) {
         if (status === 'error') {
             loadContent('404'); //Possible infinite loop?
         }
