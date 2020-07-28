@@ -31,24 +31,56 @@ function onFirstLoad() {
 }
 
 function loadContent(selection, state, changeState) {
-    $('#page-content').hide().load(`${ window.location.origin }/pages/${ selection }`, function (response, status) {
-        if (status === 'error') {
-            loadContent('404'); //Possible infinite loop?
-        }
-        $('#page-content').fadeIn('normal');
+    $('#page-content').fadeOut('fast', function () {
+        $('#page-content').load(`${ window.location.origin }/pages/${ selection }`, function (response, status) {
+            if (status === 'success') {
+                loadPartials(); //Check for partials every time the page is reloaded, then finally run insertLightbox() when finished.
+                $('#page-content').fadeIn('fast');
+            }
+            if (status === 'error') {
+                loadContent('404'); //Possible infinite loop?
+                return;
+            }
+        });
     });
-    
-    loadPartials(); //Check for partials every time the page is reloaded.
     
     if (typeof changeState === 'undefined' && changeState !== false) {
         if (selection === 'home') { //Instead of home having a /home.html url, display as base domain.
             if (window.location.pathname !== '/') {
                 window.history.pushState(state, '', '/');
+                $('base').attr('href', `/`)
             }
         } else if (selection !== '404' && selection !== window.location.pathname.substr(1)) { //Maintain page url despite 404
             window.history.pushState(state, '', `/${selection}`);
+            $('base').attr('href', `${ location.origin }`)
         }
     }
+
+    //Make header link active based on URL
+    $('.nav-link').each(function () {
+        if (($(this).attr('onclick').indexOf(location.pathname.split('/')[1]) !== -1 && location.pathname !== '/') || ( $(this).html().toLowerCase() === 'home' && location.pathname === '/' )) { //Highlight if on home page
+            $(this).addClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+        //Activate dropdowns
+        if ($(this).hasClass('dropdown-toggle')) {
+            if (location.pathname.split('/').length > 2 && $(this).prev().hasClass('active')) {
+                $(this).addClass('active');
+            } else {
+                $(this).removeClass('active');
+            }
+        }
+    });
+
+    //Activate dropdown items
+    $('.dropdown-item').each(function () {
+        if ($(this).attr('onclick').split("'")[1] === location.pathname.substr(1)) {
+            $(this).addClass('active');
+        } else {
+            $(this).removeClass('active');
+        }
+    });
 }
 
 /* DEPRECATED CODE
