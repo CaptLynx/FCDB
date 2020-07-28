@@ -1,24 +1,24 @@
 <div class="container">
     <div class="row">
         <div class="col-auto">
-            <form onsubmit="loadContent('carriers', $('form').serializeArray()); return false;" method="GET" class="form-group">
+            <form onsubmit="storeFormData($('form').serializeArray()); return false;" method="GET" class="form-group">
                     <!-- Carrier Identification -->
                     <h2>Carrier details</h2>
                 <div class="form-group">
                     <label for="id">Carrier ID *</label>
-                    <input type="id" name="carrierID" class="form-control" id="id" placeholder="XXX-XXX" required>
+                    <input type="id" name="Carrier ID:" class="form-control" id="id" placeholder="XXX-XXX" required>
                 </div>
                 <div class="form-group">
                     <label for="name">Carrier Name *</label>
-                    <input type="name" name="carrierName" class="form-control" id="name" placeholder="Fleet Carrier" required>
+                    <input type="name" name="Carrier Name:" class="form-control" id="name" placeholder="Fleet Carrier" required>
                 </div>
                 <div class="form-group">
                     <label for="name">Commander Name</label>
-                    <input type="name" name="cmdrName" class="form-control" id="name" placeholder="CMDR">
+                    <input type="name" name="Commander Name:" class="form-control" id="name" placeholder="CMDR">
                 </div>
                 <div class="form-group">
                     <label for="tariff">Tariff Percentage</label>
-                    <input type="number" name="tarrif" class="form-control" id="tariff" placeholder="0" min="0" max="1000" step="10">
+                    <input type="number" name="Tariff Percentage:" class="form-control" id="tariff" placeholder="0" min="0" max="1000" step="10">
                 </div>
                     <!-- Checkmarks -->
                 <div class="form-group form-check">
@@ -96,3 +96,7 @@
         </div>
     </div>
 </div>
+
+<script src="pages/addcarrier/formData.js">
+    
+</script>

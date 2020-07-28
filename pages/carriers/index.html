@@ -1,7 +1,7 @@
 <h1>This is a carriers page!</h1>
 <h4>There's nothing here right now except testing!</h4>
 
-<div id="example"></div>
+<div id="carrierInfo"></div>
 
 
 <!-- 
@@ -11,10 +11,34 @@
 <script>
     console.log(window.history.state);
     $(window.history.state).each(function(i, e) {
-        $('#example').append(
+        $('#carrierInfo').append(
             `<div class="row"><div class="column">Name: ${ window.history.state[i].name }</div><div class="column">Value: ${ window.history.state[i].value }</div></div>`
         )
     });
+</script>
+
+<script>
+    console.log(window.history.state);
+    
+        $('#carrierInfo').append(
+            `<div class="container">
+  <div class="row">
+    <div class="col-sm">
+        <label>Carrier ID:</label>
+      ${window.history.state[0].value}
+    </div>
+    <div class="col-sm">
+        <label>Carrier Name:</label>
+      ${window.history.state[1].value}
+    </div>
+    <div class="col-sm">
+        <label>Commander Name:</label>
+      ${window.history.state[2].value}
+    </div>
+  </div>
+</div>`
+        )
+    ;
 </script>
 
 <style>
@@ -26,3 +50,5 @@
         flex: 50%;
     }
 </style>
+
+<script src="pages/carriers/listData.js"></script>
